@@ -12,7 +12,7 @@ import { TokenModel } from '../models/token-model';
   providedIn: 'root',
 })
 export class AuthService {
-  private apiUrl = 'https://edu-api.tohirjon.uz/api/';
+  private apiUrl = 'https://localhost:7250/api/';
 
   constructor(private router: Router, private http: HttpClient) {}
   decodedToken: any;
@@ -61,12 +61,12 @@ export class AuthService {
   }
 
   isAuthenticated(): boolean {
-    console.log('Is authenticated ga keldi');
+    console.log('authenticated ga keldi');
     this.decodedToken = this.decodeToken();
     if (this.decodedToken) {
       const expireDate = new Date(this.decodedToken.expireDate * 1000); // Convert expiration timestamp to Date object
       const currentDate = new Date();
-      console.log('hozir exp date tekshiriladi');
+      console.log('exp date tekshiriladi');
       return expireDate > currentDate; // Compare expiration date with current date
     }
     console.log('keldi lekin decodedToken null');
