@@ -1,0 +1,38 @@
+<main class="site-main">
+  <div class="main-wrapper">
+    <app-aside></app-aside>
+  </div>
+  <app-navbar></app-navbar>
+
+  <section class="schedule-section padding">
+    <div class="container">
+      <div class="field">
+        <input
+          type="text"
+          name="fullname"
+          id="fullname"
+          [(ngModel)]="title"
+          placeholder="Title"
+          autofill="autofill"
+        />
+        <label for="fullname">Title</label>
+      </div>
+      <div class="field">
+        <input
+          type="text"
+          name="fullname"
+          id="fullname"
+          [(ngModel)]="expForWaatching"
+          placeholder="Exp for waatching"
+          autofill="autofill"
+        />
+        <label for="fullname">Exp for waatching</label>
+      </div>
+      <form (submit)="uploadVideo()" enctype="multipart/form-data">
+        <input type="file" (change)="handleFileInput($event)" accept="video/*">
+        <button type="submit">Upload Video</button>
+      </form>
+      <!-- <button class="submit-button" (click)="submit()">Submit</button> -->
+    </div>
+  </section>
+</main>

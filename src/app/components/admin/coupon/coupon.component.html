@@ -1,0 +1,23 @@
+<main class="site-main">
+  <div class="main-wrapper ">
+    <app-aside></app-aside>
+  </div>
+  <app-navbar></app-navbar>
+
+  <section class="schedule-section padding">
+    
+    <div class="container">
+      <div class="field">
+        <input type="text" name="fullname" id="fullname" [(ngModel)] ="couponCode" placeholder="Full Name" autofill="autofill">
+        <label for="fullname">Coupon code</label>
+      </div>
+      <div class="field">
+        <input type="number" name="fullname" id="fullname" [(ngModel)] ="discount" placeholder="Full Name" autofill="autofill">
+        <label for="fullname">Discount</label>
+      </div>
+      <button class="submit-button" (click)="submit()">Submit</button>
+
+    </div>
+  </section>
+  
+</main>

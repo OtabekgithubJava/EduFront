@@ -1,0 +1,167 @@
+.quiz-section {
+  width: 100%;
+  .wrapper {
+    display: flex;
+    justify-content: space-between !important;
+  }
+
+  h1 {
+    text-align: center;
+  }
+
+  form {
+    margin-top: 20px;
+  }
+
+  #results {
+    margin-top: 20px;
+  }
+
+  #resultText {
+    font-weight: bold;
+  }
+
+  .container-fluid {
+    padding: 20px 100px;
+    background-color: white;
+    border-radius: 20px;
+  }
+
+  .form-item-selected {
+    border: 2px solid #7662ea !important;
+    border-radius: 7px;
+    padding: 5px 15px;
+    color: #7662ea;
+
+    span {
+      background-color: #7662ea !important;
+      padding: 0 5px !important;
+      border-radius: 5px !important;
+      color: white !important;
+    }
+  }
+
+  .form-item {
+    width: 550px;
+    border: 2px solid #bebcbc;
+    border-radius: 7px;
+    padding: 10px 15px;
+    margin-bottom: 15px;
+
+    span {
+      background-color: #d3d4d7;
+      padding: 0 5px;
+      border-radius: 5px;
+    }
+  }
+  .buttonCheck {
+    padding-left: 300px;
+    // margin-top: 100px;
+    padding-top: 100px;
+  }
+  .btn1 {
+    height: 45px;
+    width: 120px;
+    border: 1px solid#7662ea;
+    border-radius: 10px;
+    border-color: 1px solid #7662ea;
+    color: #7662ea;
+    margin-right: 10px;
+    outline: none;
+    background-color: white;
+
+    &:disabled {
+      cursor: auto;
+      color: #d3d4d7;
+      border: 1px solid #d3d4d7;
+    }
+    
+    &:enabled:hover {
+      background-color: #7662ea;
+      color: white;
+    }
+  }
+
+  .check {
+    background-color: #7662ea;
+    color: white;
+  }
+
+  // -------------------------------------------------
+  .question {
+    background-color: white;
+    border-radius: 20px;
+    padding: 20px 60px;
+  }
+  .question2 {
+    width: 100%;
+    height: 20px;
+    // border: 1px solid;
+    border-radius: 20px;
+    background-color: #d3d5da;
+    overflow: hidden;
+  }
+  .question3 {
+    width: 80%;
+    height: 20px;
+    display: inline-block;
+    border-radius: 20px;
+    background-color: #7662ea;
+  }
+
+  .flex {
+    margin-top: 20px;
+    gap: 10px;
+    align-items: center;
+  }
+
+  .oll {
+    margin-top: 25px;
+    margin-left: 15px;
+  }
+
+  .lispan {
+    width: 20px;
+    height: 20px;
+    margin-left: 145px;
+     border: 1px solid #7662ea;
+    border-radius: 50%;
+    background-color: #eceff3;
+    display: inline-block;
+    span{
+      display: none;
+    }
+  }
+
+  .checked {
+    color: white;
+    background-color: #7662ea;
+    span {
+      display: block;
+      position: relative;
+      left: 3px;
+    }
+  }
+
+  .current__test{
+    position: relative;
+
+    &::after{
+      content: "";
+      // display: inline-block;
+      position: absolute;
+      top: 4.5px;
+      left: 4.5px;
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background-color: #7662ea;
+    }
+  }
+
+ 
+
+  
+
+  
+}

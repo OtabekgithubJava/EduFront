@@ -1,0 +1,101 @@
+<main class="site-main">
+  <div class="main-wrapper">
+    <app-aside></app-aside>
+  </div>
+  <app-navbar></app-navbar>
+
+  <!-- <app-navbar-title></app-navbar-title> -->
+
+  <app-navbar></app-navbar>
+  <section class="course-section">
+    <div class="all-courses">
+      <h1>All Courses</h1>
+      <div class="collapses">
+        <button routerLinkActive="course-active" [routerLink]="['/courses/progress']" class="cursor">
+          In Progress <span class="badge-span">6</span>
+        </button>
+        <button routerLinkActive="course-active" [routerLink]="['/courses/upcoming']" class="cursor">
+          Upcoming <span class="badge-span">2</span>
+        </button>
+      </div>
+      <div class="course-cards">
+        <div [routerLink]="['/course-detail']" class="course-card cursor">
+          <img
+            src="assets/images/kattamen.png"
+            alt=""
+          />
+          <div class="course-info">
+            <h2>
+              UX & Web Design Master Course: Strategy, Design, Development
+            </h2>
+            <p>
+              Lorem ipsum dolor atis delectus consequuntur temporibus beatae
+              eveniet.
+            </p>
+            <div class="card-info">
+              <div>
+                <img
+                  src="assets/images/kattamen.png"
+                  alt=""
+                />
+                <p>Ramon Reynald</p>
+              </div>
+              <div>
+                <i class="fa-regular fa-folder-open"></i>
+                <p>62 lectures</p>
+              </div>
+              <div>
+                <i class="fa-regular fa-clock"></i>
+                <p>3h 4m total length</p>
+              </div>
+            </div>
+            <div class="progress-amount">
+              <button>In Progress</button>
+              <div class="range">
+                <div class="out-per">
+                  <div class="in-per"></div>
+                </div>
+                <pre>45%</pre>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="recom-courses">
+      <div class="recom-courses-navbar">
+        <h2>Recommended Course</h2>
+        <button class="d-none">Browse Course <i class="fa-solid fa-arrow-right"></i></button>
+      </div>
+      <div class="recom-course-info">
+        <div class="recom-course-card cursor">
+          <img
+          src="assets/images/kattamen.png"
+            alt=""
+          />
+          <div class="course-info">
+            <h2>UX & Web Design Master Course: Strategy, Design,</h2>
+            <p>Lorem ipsum dolor atis beatae eveniet.</p>
+            <div class="card-info">
+              <div>
+                <i class="fa-regular fa-folder-open"></i>
+                <p>62 lectures</p>
+              </div>
+              <div>
+                <i class="fa-regular fa-clock"></i>
+                <p>3h 4m total length</p>
+              </div>
+            </div>
+            <div class="course-owner">
+              <img
+                src="assets/images/kattamen.png"
+                alt=""
+              />
+              <p>Ramon Reynald</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>

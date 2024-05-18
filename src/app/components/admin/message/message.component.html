@@ -1,0 +1,23 @@
+<main class="site-main">
+  <div class="main-wrapper ">
+    <app-aside></app-aside>
+  </div>
+  <app-navbar></app-navbar>
+
+  <section class="schedule-section padding">
+    <div class="container">
+      <div class="field">
+        <input type="text" name="fullname" id="fullname"  placeholder="Message" autofill="autofill">
+        <label for="fullname">Course Name</label>
+      </div>
+      <div class="field">
+        <input type="text" name="fullname" id="fullname" [(ngModel)] ="description" placeholder="description" autofill="autofill">
+        <label for="fullname">Description</label>
+      </div>
+
+      <button class="submit-button" (click)="submit()">Submit</button>
+
+    </div>
+  </section>
+  
+</main>

@@ -1,0 +1,58 @@
+<main class="site-main">
+  <div class="main-wrapper ">
+    <app-aside></app-aside>
+  </div>
+  <app-navbar></app-navbar>
+
+  <section class="schedule-section padding">
+    <div class="container">
+      <div class="field">
+        <input type="text" name="fullname" id="fullname" [(ngModel)] ="courseName" placeholder="Course Name" autofill="autofill">
+        <label for="fullname">Course Name</label>
+      </div>
+      <div class="field">
+        <input type="text" name="fullname" id="fullname" [(ngModel)] ="description" placeholder="description" autofill="autofill">
+        <label for="fullname">Description</label>
+      </div>
+      
+      <div class="field">
+        <input type="number" name="fullname" id="fullname" [(ngModel)] ="totalTime" placeholder="Total time" autofill="autofill">
+        <label for="fullname">Total time</label>
+      </div>
+      <div class="field">
+        <input type="number" name="fullname" id="fullname" [(ngModel)] ="price" placeholder="Price" autofill="autofill">
+        <label for="fullname">Price</label>
+      </div>
+      
+      <div class="field">
+        <input type="text" name="fullname" id="fullname" [(ngModel)] ="language" placeholder="Language" autofill="autofill">
+        <label for="fullname">Language</label>
+      </div>
+      <div class="field">
+        <input type="text" name="fullname" id="fullname" [(ngModel)] ="teacherName" placeholder="Teacher Name" autofill="autofill">
+        <label for="fullname">Teacher Name</label>
+      </div>
+
+      <div class="field">
+      <select name="teacher" id="teacher" [(ngModel)]="selectedCoupon">
+        <option value="" disabled selected hidden>Choose Coupon code</option>
+        <option *ngFor="let coupon of coupons" [value]="coupon.id">code: {{ coupon.couponCode }}      discount: {{coupon.discount}}</option>
+      </select>
+      <label for="teacher">Coupon Code</label>
+    </div>
+
+    <div class="field">
+      <select name="teacher" id="teacher" [(ngModel)]="selectedCategory">
+        <option value="" disabled selected hidden>Choose Category</option>
+        <option *ngFor="let category of categories" [value]="category.id">{{ category.name }}</option>
+      </select>
+      <label for="teacher">Category</label>
+    </div>
+
+
+      <button class="submit-button" (click)="submit()">Submit</button>
+
+    </div>
+  </section>
+  
+</main>

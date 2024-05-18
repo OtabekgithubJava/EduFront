@@ -1,0 +1,73 @@
+<main class="site-main">
+  <div class="main-wrapper ">
+    <app-aside></app-aside>
+  </div>
+  <app-navbar></app-navbar>
+
+  <section class="leaderboard-section padding">
+    <div class="warpper">
+
+      <div class="section">
+        
+        <div class="navbar1">
+          <div><h1>Leardboard</h1></div>
+        <div class="searchBorder">
+          <i class="fas fa-search"></i>
+          <input
+            class="search"
+            type="search"
+            placeholder="Search messages..."/>
+        </div>
+        <div class="Alltime">
+          <div class="Alltime" (click)="addClass()"><span class={{selected1}}>All Time</span></div>
+          <div class="Alltime" (click)="addClass2()" ><span class={{selected2}}>Weekly</span></div>
+          <div class="Alltime" (click)="addClass3()"><span class={{selected3}}>Monthly</span></div>
+          <!-- <span >Weekly</span>
+          <span >Monthly</span> -->
+        </div>
+      </div>
+      
+      <div class="navbar2">
+        <strong>RANK</strong>
+        <strong class="navbarName">NAME</strong>
+        <strong class="navbarTotal">TOTAL POINT</strong>
+        <strong class="navbarCompleted">COMPLETED COURSE</strong>
+        <strong class="navbarLearning">LEARNING TIME</strong>
+        <!-- <strong class="navbarActivity">ACTIVITY</strong> -->
+        <strong>ACTION</strong>
+      </div>
+
+      <div class="chiziq"></div>
+
+      <div>
+        <ul class="top-students__list"  *ngFor="let student of topStudents">
+          <li class="top-students__item">
+            <a [routerLink]="[]" class="flex">
+              <div class="flex">
+                <div class="student__wrapper--rating flex">
+                  <p>{{ student.rank }}</p>
+                  <span></span>
+                </div>
+                <img [src]="student.photoPath === '' ? 'assets/images/kattamen.png' : 'https://edu-api.tohirjon.uz/' + student.photoPath" width="40" [alt]="student.name + ' aka\'ni rasmi bor'">
+                <div class="student__wrapper--name">
+                  <h3>{{ student.fullName }}</h3>
+                  <p>{{ student.country }}</p>
+                </div>
+                <p class="total">{{ student.exp }}</p>
+                <p class="completed">{{ student.completedCourses }}</p>
+                <time class="learning">{{ student.learningTime }}</time>
+                <p class="action">•••</p>
+              </div>
+              
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      </div>
+
+    </div>
+    
+  </section>
+  
+</main>

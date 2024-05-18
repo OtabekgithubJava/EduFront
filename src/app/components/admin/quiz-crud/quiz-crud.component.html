@@ -1,0 +1,17 @@
+<main class="site-main">
+  <div class="main-wrapper ">
+    <app-aside></app-aside>
+  </div>
+  <app-navbar></app-navbar>
+
+  <section class="schedule-section padding">
+    <div class="container">
+      <div class="field">
+        <input type="text" name="fullname" id="fullname" [(ngModel)] ="title" placeholder="Title of quiz" autofill="autofill">
+        <label for="fullname">Title</label>
+      </div>
+      <button class="submit-button" (click)="submit()">Submit</button>
+    </div>
+  </section>
+  
+</main>

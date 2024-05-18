@@ -1,0 +1,32 @@
+<main class="site-main">
+  <div class="main-wrapper ">
+    <app-aside></app-aside>
+  </div>
+  <app-navbar></app-navbar>
+
+
+
+  
+
+
+  <section class="schedule-section padding">
+
+
+
+    
+    <app-create *ngIf="currentComponent === 'create'"></app-create>
+    <app-update *ngIf="currentComponent === 'update'"></app-update>
+    <app-get-all *ngIf="currentComponent === 'get-all'"></app-get-all>
+    <app-delete *ngIf="currentComponent === 'delete'"></app-delete>
+    
+    
+    <div class="button-container">
+      <button (click)="showCreateComponent()">Create</button>
+      <button (click)="showUpdateComponent()">Update</button>
+      <button (click)="showGetAllComponent()">Get All</button>
+      <button (click)="showDeleteComponent()">Delete</button>
+    </div>
+
+  </section>
+  
+</main>

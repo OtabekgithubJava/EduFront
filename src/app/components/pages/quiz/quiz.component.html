@@ -1,0 +1,89 @@
+<main class="site-main">
+  <div class="main-wrapper">
+    <app-aside></app-aside>
+  </div>
+  <app-navbar></app-navbar>
+
+  <section class="quiz-section padding">
+    <div class="wrapper">
+      <div class="question">
+        <h3>An importance of Having a Brand</h3>
+
+        <div class="flex">
+          <div class="question2">
+            <span class="question3"></span>
+          </div>
+          <span>5/6</span>
+        </div>
+
+        <ol class="oll">
+          <li>
+            Which is Brand?
+            <span class="lispan current__test"><span>✓</span></span>
+          </li>
+        </ol>
+      </div>
+
+      <div class="container-fluid">
+        <div class="jumbotron">
+          <h3>Quiz #1</h3>
+          <br />
+          <p>Which elements can you not when use branding on Instagramm?</p>
+          <br />
+        </div>
+
+        <div class="card border-info mb-4">
+          <div
+            class="d-flex justify-content-between align-items-center card-header bg-info text-white"
+            id="h1"
+          ></div>
+          <div>
+            <div id="q1" class="collapse show" aria-labelledby="h1">
+              <div class="card-body">
+                <div class="form-check" (click)="addClass()">
+                  <div class="{{ selected }}">
+                    <span>A</span>
+                    Stories
+                  </div>
+                </div>
+
+                <div class="form-check" (click)="addClass2()">
+                  <div class="{{ selected2 }}">
+                    <span>B</span>
+                    Caption
+                  </div>
+                </div>
+
+                <div class="form-check" (click)="addClass3()">
+                  <div class="{{ selected3 }}" for="q1_r3">
+                    <span>C</span>
+                    Bio Profile
+                  </div>
+                </div>
+
+                <div class="form-check d-none" (click)="addClass4()">
+                  <div class="{{ selected4 }}" for="q1_r4">
+                    <span>D</span>
+                    Logo
+                  </div>
+                </div>
+
+                <div class="form-check d-none" (click)="addClass5()">
+                  <div class="{{ selected5 }}" for="q1_r4">
+                    <span>E</span>
+                    Status
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="buttonCheck">
+          <button type="button" class="btn1  cursor"><b>Previous</b></button>
+          <button type="button" class={{check}} #checkAnswer (click)="answer()"><b>Check Answer</b></button>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>

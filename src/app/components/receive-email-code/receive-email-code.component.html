@@ -1,0 +1,39 @@
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+
+<div class="form-gap"></div>
+<div class="container">
+	<div class="row">
+		<div class="col-md-4 col-md-offset-4">
+            <div class="panel panel-default">
+              <div class="panel-body">
+                <div class="text-center">
+                  <h3><b>Enter code</b></h3>
+                  <p style="font-size: 12px;">Enter the password sent to your email.</p>
+                  <div class="panel-body">
+    
+                    <form id="register-form" role="form" autocomplete="off" class="form" method="post">
+    
+                      <div class="form-group">
+                        <div class="input-group">
+                          <p style="color: rgb(169, 163, 163); margin-right: 230px; font-size: 10px; margin-bottom: 4px;">Code</p>
+                          <input style="width: 100%;" id="newPassword" [(ngModel)] = "code" name="newPassword" placeholder="123456" class="form-control " type="number"> 
+
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <input style="background-color: #7662EA; margin-top: 35px; font-size: 15px;" (click)="confirmCode()" name="recover-submit" class="btn btn-lg btn-primary btn-block" value="Confirm" type="submit"><br>
+                        <a style="color: #7662EA; font-size: 14px" [routerLink]="['/login']"><i class="fa-solid fa-arrow-left-long"></i>  Back to Sign in</a>
+                        
+                      </div>
+                      
+                      <input type="hidden" class="hide" name="token" id="token" value=""> 
+                    </form>
+    
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+	</div>
+</div>

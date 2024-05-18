@@ -1,0 +1,37 @@
+<main class="site-main">
+  <div class="main-wrapper ">
+    <app-aside></app-aside>
+  </div>
+  <app-navbar></app-navbar>
+
+  <section class="schedule-section padding">
+    <div class="container">
+      <div class="field">
+        <input type="text" name="fullname" id="fullname" [(ngModel)] ="question" placeholder="Question" autofill="autofill">
+        <label for="fullname">Quesion</label>
+      </div>
+      <div class="field">
+        <input type="text" name="fullname" id="fullname" [(ngModel)] ="optionA" placeholder="Option A" autofill="autofill">
+        <label for="fullname">Option A</label>
+      </div>
+      <div class="field">
+        <input type="text" name="fullname" id="fullname" [(ngModel)] ="optionB" placeholder="Option B" autofill="autofill">
+        <label for="fullname">Option B</label>
+      </div>
+      <div class="field">
+        <input type="text" name="fullname" id="fullname" [(ngModel)] ="optionC" placeholder="Option C" autofill="autofill">
+        <label for="fullname">Option C</label>
+      </div>
+      <div class="field">
+        <input type="text" name="fullname" id="fullname" [(ngModel)] ="correctOption" placeholder="Correct Option" autofill="autofill">
+        <label for="fullname">Correct Option</label>
+      </div>
+      <div class="field">
+        <input type="text" name="fullname" id="fullname" [(ngModel)] ="exp" placeholder="Exp" autofill="autofill">
+        <label for="fullname">Exp</label>
+      </div>
+      <button class="submit-button" (click)="submit()">Submit</button>
+    </div>
+  </section>
+  
+</main>

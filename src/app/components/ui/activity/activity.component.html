@@ -1,0 +1,115 @@
+<div class="stats flex">
+  <div class="rating flex">
+    <div class="flex rating-item">
+      <span class="navbar-star">
+        <i class="fa-solid fa-star"></i>
+      </span>
+      <div class="flex rating__wrapper">
+        <strong>{{user.exp}}</strong>
+        <p>Total point</p>
+      </div>
+    </div>
+    <div class="flex rating-item">
+      <span class="navbar-star">
+        <i class="fa-solid fa-trophy"></i>
+      </span>
+      <div class="flex rating__wrapper">
+        <strong>{{user.rank}}</strong>
+        <p>Ranking</p>
+      </div>
+    </div>
+    <div class="flex rating-item">
+      <span class="navbar-star">
+        <i class="fa-solid fa-clock"></i>
+      </span>
+      <div class="flex rating__wrapper">
+        <strong>{{user.learningTime}}</strong>
+        <p>Learning time</p>
+      </div>
+    </div>
+    <div class="flex rating-item">
+      <span class="navbar-star">
+        <i class="fa-solid fa-circle-check"></i>
+      </span>
+      <div class="flex rating__wrapper">
+        <strong>{{user.completedCourses}}</strong>
+        <p>Completed course</p>
+      </div>
+    </div>
+  </div>
+  <div class={{status}}>
+    <h2>Activity</h2>
+    <ul class="activity__list flex">
+      <li class={{mon}} (click)="changeActivityMon()">
+        <div class="activity__wrapper">
+          <span class="time">
+            <p>3h 20m</p>
+            <p>Oct 10, 2022</p>
+          </span>
+          <span height="" class="bar"></span>
+          <p class="weekdays">Mon</p>
+        </div>
+      </li>
+      <li class={{tue}} (click)="changeActivityTue()">
+        <div class="activity__wrapper">
+          <span class="time">
+            <p>3h 20m</p>
+            <p>Oct 10, 2022</p>
+          </span>
+          <span height="" class="bar"></span>
+          <p class="weekdays">Tue</p>
+        </div>
+      </li>
+      <li class={{wed}} (click)="changeActivityWed()">
+        <div class="activity__wrapper">
+          <span class="time">
+            <p>3h 20m</p>
+            <p>Oct 19, 2022</p>
+          </span>
+          <span height="" class="bar"></span>
+          <p class="weekdays">Wed</p>
+        </div>
+      </li>
+      <li class={{thu}} (click)="changeActivityThu()">
+        <div class="activity__wrapper">
+          <span class="time">
+            <p>3h 20m</p>
+            <p>Oct 10, 2022</p>
+          </span>
+          <span height="" class="bar"></span>
+          <p class="weekdays">Thu</p>
+        </div>
+      </li>
+      <li class={{fri}} (click)="changeActivityFri()">
+        <div class="activity__wrapper">
+          <span class="time">
+            <p>3h 20m</p>
+            <p>Oct 10, 2022</p>
+          </span>
+          <span height="" class="bar"></span>
+          <p class="weekdays">Fri</p>
+        </div>
+      </li>
+      <li class={{sat}} (click)="changeActivitySat()">
+        <div class="activity__wrapper">
+          <span class="time">
+            <p>3h 20m</p>
+            <p>Oct 10, 2022</p>
+          </span>
+          <span height="" class="bar"></span>
+          <p class="weekdays">Sat</p>
+        </div>
+      </li>
+      <li class={{sun}} (click)="changeActivitySun()">
+        <div class="activity__wrapper">
+          <span class="time">
+            <p>3h 20m</p>
+            <p>Oct 10, 2022</p>
+          </span>
+          <span height="" class="bar"></span>
+          <p class="weekdays">Sun</p>
+        </div>
+      </li>
+    </ul>
+  </div>
+</div>

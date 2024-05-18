@@ -1,0 +1,15 @@
+<div class="container">
+    <div class="field">
+        <select name="teacher" id="teacher" [(ngModel)]="selectedCategory">
+          <option value="" disabled selected hidden>Choose Category</option>
+          <option *ngFor="let category of categories" [value]="category.id">{{ category.name }}</option>
+        </select>
+        <label for="teacher">Category</label>
+      </div>
+    <div class="field">
+       <input type="text" name="fullname" id="fullname" [(ngModel)] ="newName" placeholder="Category Name" autofill="autofill">
+       <label for="fullname"> NewCategory Name</label>
+    </div>
+    <button class="submit-button" (click)="submit()">Submit</button>
+
+  </div>

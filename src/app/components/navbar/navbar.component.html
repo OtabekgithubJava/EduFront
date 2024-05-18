@@ -1,0 +1,19 @@
+<div class="site-navbar">
+  <div class="navbar flex">
+    <div class="flex search__wrapper">
+      <i class="fa-solid fa-magnifying-glass"></i>
+      <input type="search" class="navbar-serch" placeholder="Search" />
+    </div>
+    <div class="navbar__wrapper flex">
+      <i class="fa-regular fa-bell"></i>
+      <div class="flex">
+        <span class="navbar-star"><i class="fa-solid fa-star"></i></span>
+        <span>{{user.exp}}</span>
+        <span></span>
+        <img style="cursor: pointer; border-radius: 50%;" title="Profile" [routerLink]="['/profile']" [src]="user.photoPath === null || user.photoPath === '' ? 'assets/images/kattamen.png' : 'https://edu-api.tohirjon.uz/' + user.photoPath" alt="" />
+        <p>{{user.fullName}}</p>
+      </div>
+    </div>
+  </div>
+  <app-navbar-title></app-navbar-title>
+</div>

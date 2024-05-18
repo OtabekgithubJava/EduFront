@@ -1,0 +1,118 @@
+<main class="site-main">
+  <div class="main-wrapper">
+    <app-aside></app-aside>
+  </div>
+  <app-navbar></app-navbar>
+
+  <section class="messaging-section padding">
+    <!-- Your code -->
+
+    <div class="wrapper">
+      <div class="sectionOne">
+        <div class="searchBorder">
+          <i class="fas fa-search"></i>
+          <input
+            class="search"
+            type="search"
+            placeholder="Search messages..."
+          />
+        </div>
+
+        <div>
+          <div class="flex group2 cursor" (click)="toggle()">
+            <span class="group3">GROUP</span>
+            <span>
+              <b><i class="{{ icon }}"></i></b>
+            </span>
+          </div>
+          <ul class="{{ toggleGroup }}">
+            <li>
+              <a class="groupp cursor">
+                <img
+                  width="50"
+                  style="border-radius: 50%"
+                  src="assets/images/kattamen.png"
+                  alt=""
+                />
+                <div>
+                  <div class="flex">
+                    <strong>Cuap Design</strong>
+                    <time>2 min ago</time>
+                  </div>
+                  <div class="flex">
+                    <p>Reina: Hi Guyssssss!! this is an aw...</p>
+                    <span class="bildirishnoma"><b>4</b></span>
+                  </div>
+                </div>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <!-- -------------------------------------------------------- -->
+      <div class="sectionTwo">
+        <ul>
+          <li>
+            <div class="groupp">
+              <img
+                width="68"
+                style="border-radius: 50%"
+                src="assets/images/kattamen.png"
+                alt=""
+              />
+
+              <div class="flex shareAdd">
+                <h1>Cuap Design</h1>
+                <div>
+                  <a class="share2">
+                    <i class="fa-solid fa-share-nodes"></i>
+                    Share group
+                  </a>
+                  <a>
+                    <i class="fa-solid fa-user-plus"></i>
+                    Add people
+                  </a>
+                </div>
+              </div>
+            </div>
+          </li>
+        </ul>
+
+        <div class="borderTop"></div>
+
+        <div>
+          <ul>
+            <li>
+              <div class="groupp">
+                <img
+                  width="45"
+                  style="border-radius: 45%"
+                  src="assets/images/kattamen.png"
+                  alt=""
+                />
+                <div class="flex chat1">
+                  <strong>Amanda</strong>
+                  <p>Reina: Hi Guyssssss!! this is an awesome begining</p>
+                  <time>2 min ago</time>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="groupp">
+                <div class="flex chat2">
+                  <strong>You</strong>
+                  <p>Hello Maqsudkhan😎</p>
+                  <time>15 min ago</time>
+                </div>
+              </div>
+            </li>
+          </ul>
+          <div class="inputMessage flex">
+            <input  type="text" placeholder="Write your messages..." >
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: rgba(0, 0, 0, 1);"><path d="m21.426 11.095-17-8A.999.999 0 0 0 3.03 4.242L4.969 12 3.03 19.758a.998.998 0 0 0 1.396 1.147l17-8a1 1 0 0 0 0-1.81zM5.481 18.197l.839-3.357L12 12 6.32 9.16l-.839-3.357L18.651 12l-13.17 6.197z"></path></svg>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>

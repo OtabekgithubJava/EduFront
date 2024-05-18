@@ -1,0 +1,208 @@
+* {
+	box-sizing: border-box;
+}
+
+html,
+body {
+	height: 100%;
+}
+
+body {
+	margin: 0;
+ 	font-family: sans-serif;
+}
+
+.container {
+	position: absolute;
+	top: 40%;
+	left: 40%;
+	width: 40%;
+	transform: translate(-50%, -50%);
+    align-items: center;
+    justify-content: sppace-between;
+}
+
+.field {
+	display: flex;
+	flex-flow: column-reverse;
+}
+
+label,
+input {
+	transition: all 200ms ease;
+}
+
+input {
+	font-size: 24px;
+	border: 0;
+	border-bottom: 1px solid #ccc;
+	// -webkit-appearance: none;
+	border-radius: 0;
+	padding: 5px 0;
+	&:focus {
+		outline: 0;
+		border-color: coral;
+	}
+	&:placeholder-shown + label {
+		cursor: text;
+		white-space: nowrap;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		transform-origin: left bottom;
+		transform: translate(0, 2.125em) scale(1.5);
+	}
+	&:not(:placeholder-shown) + label,
+	&:focus + label {
+		transform: translate(0, 0) scale(1);
+		cursor: default;
+		color: coral;
+	}
+}
+
+label {
+	max-width: 66.666%;
+	color: #ccc;
+}
+
+::-webkit-input-placeholder {
+	opacity: 0;
+	transition: inherit;
+}
+
+
+.submit-button {
+    border: 2px solid rgba(164, 16, 164, 0.734); /* Default border color */
+    margin-top: 10px;
+    margin-left: 400px;
+    align-items: center;
+    background-color: transparent; /* Transparent background */
+    color: #333; /* Default text color */
+    padding: 10px 50px; /* Adjust padding as needed */
+    cursor: pointer; /* Show pointer cursor on hover */
+    transition: background-color 0.3s ease; /* Smooth transition effect */
+    border-radius: 50px;
+    /* Add additional styles for button appearance (e.g., font-size, border-radius) */
+  }
+  
+  .submit-button:hover {
+    background-color: rgba(164, 16, 164, 0.762); /* Change background color on hover */
+    color: #ccc;
+  }
+
+
+
+  //---------------------------------------------------------------
+
+
+  
+  
+  .button-container {
+	display: flex;
+	justify-content: center;
+	margin-top: 20px;
+  }
+  
+  button {
+	margin: 0 10px;
+	padding: 10px 20px;
+	background-color: #007bff;
+	color: white;
+	border: none;
+	cursor: pointer;
+	border-radius: 5px;
+	transition: background-color 0.3s;
+	font-size: 16px;
+	font-weight: bold;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	margin-top: 200px;
+  
+	&:hover {
+	  background-color: #0056b3;
+	}
+  
+	&:focus {
+	  outline: none;
+	}
+  }
+  
+  @keyframes slideInFromLeft {
+	0% {
+	  transform: translateX(-100%);
+	  opacity: 0;
+	}
+	100% {
+	  transform: translateX(0%);
+	  opacity: 1;
+	}
+  }
+  
+  @keyframes slideInFromRight {
+	0% {
+	  transform: translateX(100%);
+	  opacity: 0;
+	}
+	100% {
+	  transform: translateX(0%);
+	  opacity: 1;
+	}
+  }
+  
+  @keyframes slideOutToLeft {
+	0% {
+	  transform: translateX(0%);
+	  opacity: 1;
+	}
+	100% {
+	  transform: translateX(-100%);
+	  opacity: 0;
+	}
+  }
+  
+  @keyframes slideOutToRight {
+	0% {
+	  transform: translateX(0%);
+	  opacity: 1;
+	}
+	100% {
+	  transform: translateX(100%);
+	  opacity: 0;
+	}
+  }
+  
+  .create-component, .update-component, .get-all-component, .delete-component {
+	animation-duration: 0.5s;
+  }
+  
+  .create-component.ng-enter {
+	animation: slideInFromLeft ease-out;
+  }
+  
+  .create-component.ng-leave {
+	animation: slideOutToRight ease-in;
+  }
+  
+  .update-component.ng-enter {
+	animation: slideInFromLeft ease-out;
+  }
+  
+  .update-component.ng-leave {
+	animation: slideOutToRight ease-in;
+  }
+  
+  .get-all-component.ng-enter {
+	animation: slideInFromRight ease-out;
+  }
+  
+  .get-all-component.ng-leave {
+	animation: slideOutToLeft ease-in;
+  }
+  
+  .delete-component.ng-enter {
+	animation: slideInFromRight ease-out;
+  }
+  
+  .delete-component.ng-leave {
+	animation: slideOutToLeft ease-in;
+  }
+  

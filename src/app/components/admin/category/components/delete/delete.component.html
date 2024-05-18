@@ -1,0 +1,30 @@
+<div class="input-container">
+    <label class="input-label" [class.active]="isFocused || inputValue">
+      {{ placeholder }}
+    </label>
+    <input 
+      class="custom-input" 
+      type="text" 
+      [(ngModel)]="inputValue" 
+      (focus)="onInputFocus()"  
+      (blur)="onInputBlur()">
+  </div>
+
+  <table class="info-table">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>ID</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of items">
+        <td>{{ item.name }}</td>
+        <td>{{ item.id }}</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  <button class="submit-button" (click)="Delete()">Delete</button>
+  <button class="submit-button" (click)="Search()">Search</button>
+

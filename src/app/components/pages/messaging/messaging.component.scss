@@ -1,0 +1,226 @@
+.messaging-section {
+  width: 100%;
+
+  .wrapper {
+    display: flex;
+    justify-content: space-between !important;
+    gap: 30px;
+  }
+
+  .sectionOne {
+    background-color: white;
+    border-radius: 20px;
+    padding: 20px 20px;
+    width: 430px;
+    .search {
+      border: none;
+      outline: none;
+      margin-left: 8px;
+      font-size: 10px;
+      width: 90%;
+      font-size: 16px;
+    }
+    .searchBorder {
+      border: 1px solid rgb(209, 209, 209);
+      margin-bottom: 20px !important;
+      height: 30px;
+      display: flex;
+      align-items: center;
+      width: 100%;
+      border-radius: 7px;
+    }
+    i {
+      font-size: 12px;
+      color: rgb(204, 201, 201);
+      margin-left: 15px;
+    }
+    li {
+      a {
+        text-decoration: none;
+
+        &>div{
+            width: 100%;
+            &>div{
+                margin-bottom: 8px;
+                }
+            }     
+        }
+        time{
+            font-size: 12px;
+            color: rgb(143, 144, 144);
+        }
+    }
+    .groupp {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 10px 20px;
+      width: 100%;
+      height: auto;
+      background-color: rgb(240, 240, 240);
+      border-radius: 10px;
+
+    .bildirishnoma{
+        width: 30px;
+        height: 22px;
+        background-color: #7662EA;
+        border-radius: 10px;
+        color: white;
+        text-align: center;
+        }
+        
+    .flex {
+            justify-content: space-between;
+    }
+    
+    }
+    .group2{
+        margin-bottom: 7px;
+    }
+    .group3{
+        color: rgb(138, 136, 136);
+        margin-left: 10px;
+        // margin-right: 15px;
+    }
+    
+    .group4{
+        color: #7662EA;
+        margin-left: 300px;
+    }
+
+  }
+
+  .sectionTwo {
+    background-color: white;
+    border-radius: 20px;
+    padding: 20px 20px;
+    width: 100%;
+
+    .flex {
+        justify-content: space-between;
+    }
+
+    .groupp {
+        display: flex;
+        align-items: flex-start;
+        margin-top: 17px;
+        gap: 10px;
+        padding: 10px 20px;
+        width: 100%;
+    }
+
+    li {
+      a {
+        text-decoration: none;
+
+        &>div{
+            width: 100%;
+            &>div{
+                margin-bottom: 8px;
+                }
+            }     
+        }
+       
+    }
+    .flex {
+        justify-content: space-between;
+    }
+
+    .shareAdd{
+        flex-direction: column;
+        gap: 10px;
+        .fa-solid{
+            margin-right: 5px;
+        }
+        .share2{
+            margin-right: 28px;
+        }
+        a{
+            color: #7662EA;
+        }
+    }
+
+    .borderTop{
+        border-top: 1.5px solid #c5c5c5 !important;
+        width: 105.5%;
+        position: relative;
+        left: -20px;
+        margin-top: 12px;
+    }
+    li:nth-child(2){
+        .groupp{
+            justify-content: flex-end;
+        }
+    }
+    .chat1{
+        flex-direction: column;
+        font-size: 13.5px;
+        gap: 5px;
+        min-width: 100px;
+
+        time{
+            color: #bcbcbc;
+            font-size: 12.8px;
+        }
+        p{
+            border: 1px solid rgb(188, 188, 188);
+            padding: 10px;
+            border-top-left-radius: 0 !important;            
+            border-radius: 8px;
+        }
+    }
+
+    .chat2{
+        flex-direction: column;
+        font-size: 13.5px;
+        gap: 5px;
+        min-width: 100px;
+        justify-content: flex-end;
+        align-items: flex-end;
+        
+        
+        
+        time{
+            color: #bcbcbc;
+            font-size: 12.8px;
+        }
+        p{
+            background-color: #7662EA;
+            color: white;
+            border: 1px solid rgb(188, 188, 188);
+            padding: 10px;
+            border-bottom-right-radius: 0 !important;            
+            border-radius: 8px;
+        }
+
+    }    
+    .inputMessage{
+        width: 98%;
+        display: flex;
+        align-items: center;
+        padding: 0px 15px;
+        border-radius: 10px;
+        background-color: #f2f2f2;
+        outline: none;
+        border: none;
+
+        input{
+            width: 100%;
+            height: 100%;
+            border: none;
+            outline: none;
+            background-color: transparent;
+            padding: 15px 0px;
+        }
+        svg{
+            cursor: pointer;
+        }
+    }
+
+
+    
+
+  }
+
+
+}

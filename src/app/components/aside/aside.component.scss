@@ -1,0 +1,52 @@
+.aside-section {
+  position: fixed;
+  height: 100vh;
+  
+  
+  .site-logo {
+    display: inline-block;
+    padding-bottom: 40px;
+
+    img {
+      width: 120px;
+    }
+  }
+
+  .aside {
+    width: 250px;
+  }
+
+  .aside-list {
+    .aside-item {
+      a {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        text-decoration: none;
+        margin-bottom: 10px;
+        padding: 15px 30px;
+
+        &:hover {
+          background-color: white;
+    p {
+        color: black;
+    }
+        }
+
+        i {
+          font-size: 22px;
+        }
+        p {
+          color: rgb(74, 74, 74);
+          font-size: 20px;
+        }
+
+        border-radius: 15px;
+        -webkit-border-radius: 15px;
+        -moz-border-radius: 15px;
+        -ms-border-radius: 15px;
+        -o-border-radius: 15px;
+      }
+    }
+  }
+}

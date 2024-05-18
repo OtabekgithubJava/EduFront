@@ -1,0 +1,185 @@
+<main class="site-main">
+  <div class="main-wrapper">
+    <app-aside></app-aside>
+  </div>
+  <app-navbar></app-navbar>
+
+  <!-- <div class="padding"></div> -->
+  <section class="overview-section padding">
+    <div class="overview">
+      <!-- <div class="stats flex">
+        <div class="rating flex">
+          <div class="flex rating-item">
+            <span class="navbar-star">
+              <i class="fa-solid fa-star"></i>
+            </span>
+            <div class="flex rating__wrapper">
+              <strong>3475</strong>
+              <p>Total point</p>
+            </div>
+          </div>
+          <div class="flex rating-item">
+            <span class="navbar-star">
+              <i class="fa-solid fa-trophy"></i>
+            </span>
+            <div class="flex rating__wrapper">
+              <strong>3475</strong>
+              <p>Ranking</p>
+            </div>
+          </div>
+          <div class="flex rating-item">
+            <span class="navbar-star">
+              <i class="fa-solid fa-clock"></i>
+            </span>
+            <div class="flex rating__wrapper">
+              <strong>3475</strong>
+              <p>Learning time</p>
+            </div>
+          </div>
+          <div class="flex rating-item">
+            <span class="navbar-star">
+              <i class="fa-solid fa-circle-check"></i>
+            </span>
+            <div class="flex rating__wrapper">
+              <strong>3475</strong>
+              <p>Completed course</p>
+            </div>
+          </div>
+        </div>
+        <div class="activity rating">
+          <h2>Activity</h2>
+          <ul class="activity__list flex">
+            <li class="activity__item">
+              <div class="activity__wrapper">
+                <span class="time">
+                  <p>3h 20m</p>
+                  <p>Oct 10, 2022</p>
+                </span>
+                <span height="" class="bar"></span>
+                <p class="weekdays">Mon</p>
+              </div>
+            </li>
+            <li class="activity__item">
+              <div class="activity__wrapper">
+                <span class="time">
+                  <p>3h 20m</p>
+                  <p>Oct 10, 2022</p>
+                </span>
+                <span height="" class="bar"></span>
+                <p class="weekdays">Tue</p>
+              </div>
+            </li>
+            <li class="activity__item">
+              <div class="activity__wrapper">
+                <span class="time">
+                  <p>3h 20m</p>
+                  <p>Oct 10, 2022</p>
+                </span>
+                <span height="" class="bar"></span>
+                <p class="weekdays">Wed</p>
+              </div>
+            </li>
+            <li class="activity__item">
+              <div class="activity__wrapper">
+                <span class="time">
+                  <p>3h 20m</p>
+                  <p>Oct 10, 2022</p>
+                </span>
+                <span height="" class="bar"></span>
+                <p class="weekdays">Thu</p>
+              </div>
+            </li>
+            <li class="activity__item">
+              <div class="activity__wrapper">
+                <span class="time">
+                  <p>3h 20m</p>
+                  <p>Oct 10, 2022</p>
+                </span>
+                <span height="" class="bar"></span>
+                <p class="weekdays">Fri</p>
+              </div>
+            </li>
+            <li class="activity__item select-item">
+              <div class="activity__wrapper">
+                <span class="time">
+                  <p>3h 20m</p>
+                  <p>Oct 10, 2022</p>
+                </span>
+                <span height="" class="bar"></span>
+                <p class="weekdays">Sat</p>
+              </div>
+            </li>
+            <li class="activity__item">
+              <div class="activity__wrapper">
+                <span class="time">
+                  <p>3h 20m</p>
+                  <p>Oct 10, 2022</p>
+                </span>
+                <span height="" class="bar"></span>
+                <p class="weekdays">Sun</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div> -->
+
+      <app-activity></app-activity>
+
+      <div class="stats flex upcoming-course__wrapper">
+        <div class="upcoming rating">
+          <div class="title-wrapper flex">
+            <h2>Upcoming Courses</h2>
+            <a [routerLink]="['/courses']">
+              All courses
+              <i class="fa-solid fa-arrow-right"></i>
+            </a>
+          </div>
+
+          <app-course-part></app-course-part>
+
+          <!-- <ul class="upcoming__list">
+            <li class="upcoming__item flex">
+              <img width="100" height="100" src="assets/images/kattamen.png" alt="">
+              <div class="upcoming__wrapper">
+                <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Non libero nulla quia molestiae distinctio corrupti, nam perferendis suscipit sunt sit impedit expedita, </h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique quod quidem ab et eius officia!</p>
+                <div class="flex">
+                  <strong class="img-wrapper"><img width="30" src="assets/images/kattamen.png" alt="">Katteman</strong>
+                  <strong><i class="fa-regular fa-paste"></i>Lecture</strong>
+                  <strong><i class="fa-regular fa-clock"></i>total length</strong>
+                </div>
+                <p class="time">Available at 08:00 AM</p>
+              </div>
+            </li>
+          </ul>
+           -->
+        </div>
+
+        <div class="top-students rating upcoming">
+          <div class="title-wrapper flex">
+            <h2 (click)="check()">Top Tier Students</h2>
+            <a [routerLink]="['/leaderboard']">All Leaderboard <i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+        
+          <ul class="top-students__list">
+            <li class="top-students__item" *ngFor="let student of topStudents">
+              <a [routerLink]="['/leaderboard']" class="flex">
+                <div class="flex">
+                  <img  [src]="student.photoPath === null || student.photoPath === '' ? 'assets/images/kattamen.png' : 'https://edu-api.tohirjon.uz/' + student.photoPath"  width="40" [alt]="student.name + ' avatar'" #studentImg>
+                  <div class="student__wrapper--name">
+                    <h3>{{ student.fullName }}</h3>
+                    <p>{{ student.country }}</p>
+                  </div>
+                </div>
+                <div class="student__wrapper--rating flex">
+                  <span></span>
+                  <p>{{ student.exp }}</p>
+                </div>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>

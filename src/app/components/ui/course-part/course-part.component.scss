@@ -1,0 +1,51 @@
+  .upcoming__item {
+    padding: 10px;
+    margin-top: 30px;
+    align-items: center;
+
+    &:hover {
+      border-radius: 10px;
+      background-color: #6d6d6d34;
+    }
+  }
+
+  img {
+    border-radius: 10px;
+  }
+
+  .upcoming__wrapper {
+    margin-left: 20px;
+
+    p,
+    h3 {
+      margin-bottom: 5px;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      max-width: 500px; /* istalgan o'  lchamdagi miqdorni o'zgartiring */
+    }
+
+    .flex {
+      gap: 15px;
+    }
+
+    strong {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+      font-weight: 400;
+
+      &:first-child {
+        font-weight: 500;
+      }
+    }
+
+    .time {
+      margin-top: 10px;
+      padding: 10px;
+      border-radius: 10px;
+      background-color: rgba(0, 128, 0, 0.184);
+      color: green;
+      width: 180px;
+    }
+  }
