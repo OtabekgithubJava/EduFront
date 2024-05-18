@@ -7,7 +7,7 @@ import { Observable, map } from 'rxjs';
 })
 export class UserService {
 
-  private apiUrl = 'https://edu-api.tohirjon.uz/api/';
+  private apiUrl = 'https://localhost:7250/api/';
   constructor(private http: HttpClient) {}
 
   getAllUsers(): Observable<any> {
